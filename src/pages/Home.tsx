@@ -1,13 +1,19 @@
 
 import { ArrowRight, Network, Shield, Code } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import heroBg from '@/assets/hero-bg.jpeg';
 
 const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary via-tech-blue-dark to-secondary text-white py-20">
-        <div className="container mx-auto px-4 text-center">
+      <section className="relative text-white py-20 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroBg})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-tech-blue-dark/70 to-secondary/80" />
+        <div className="container mx-auto px-4 text-center relative z-10">
           <div className="animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               Bienvenue sur mon site
