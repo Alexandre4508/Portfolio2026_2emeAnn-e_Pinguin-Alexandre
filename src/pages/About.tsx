@@ -78,6 +78,18 @@ const About = () => {
                 et je sais écouter les suggestions pour améliorer mon travail.
               </p>
             </div>
+            <div>
+              <h3 className="font-semibold text-lg mb-3 text-primary">Mode & Développement personnel</h3>
+              <p className="text-gray-600 mb-4">
+                Intéressé par le monde de la mode, j'ai participé à l'élection de Mister Étudiant Réunion 2026. 
+                Cette expérience me permet de me développer sur le plan humain et de renforcer ma confiance en moi.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg mb-3 text-secondary">Danse</h3>
+              <p className="text-gray-600 mb-4">
+                J'aime danser, une passion qui me permet de m'exprimer, de me détendre et de cultiver ma créativité au quotidien.
+              </p>
           </div>
         </div>
 
