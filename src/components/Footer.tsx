@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-6 pt-4 border-t border-blue-400 text-center text-blue-100">
-          <p>&copy; 2024 Alexandre Pinguin. Tous droits réservés.</p>
+          <p>&copy; Alexandre Pinguin. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

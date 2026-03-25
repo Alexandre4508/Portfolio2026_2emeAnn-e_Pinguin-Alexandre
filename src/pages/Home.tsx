@@ -16,7 +16,7 @@ const Home = () => {
               Alexandre Pinguin
             </h2>
             <p className="text-xl md:text-2xl mb-12 text-blue-200 max-w-3xl mx-auto">
-              Étudiant passionné en première année de BUT Réseaux et Télécommunications
+              Étudiant en deuxième année de BUT Réseaux et Télécommunications - Parcours cybersécurité
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <Link 
