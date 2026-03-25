@@ -13,7 +13,7 @@ const Home = () => {
           style={{ backgroundImage: `url(${heroBg})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-tech-blue-dark/70 to-secondary/80" />
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto px-4 text-center relative z-10">
           <div className="animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               Bienvenue sur mon site
