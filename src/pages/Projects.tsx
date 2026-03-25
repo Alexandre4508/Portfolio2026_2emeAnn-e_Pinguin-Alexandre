@@ -103,11 +103,22 @@ const Projects = () => {
                 <div className="bg-gray-50 px-6 py-4">
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-500 font-medium">Projet académique</span>
-                    <div className="flex space-x-1">
-                      {[1, 2, 3].map((star) => (
-                        <div key={star} className="w-2 h-2 bg-primary rounded-full"></div>
-                      ))}
-                    </div>
+                    {project.link ? (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 text-sm font-medium text-primary hover:underline transition-colors"
+                      >
+                        Voir la présentation <ExternalLink size={14} />
+                      </a>
+                    ) : (
+                      <div className="flex space-x-1">
+                        {[1, 2, 3].map((star) => (
+                          <div key={star} className="w-2 h-2 bg-primary rounded-full"></div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
