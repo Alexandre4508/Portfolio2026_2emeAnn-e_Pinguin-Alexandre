@@ -93,7 +93,6 @@ const About = () => {
             </div>
           </div>
         </div>
-        </div>
 
         <div className="bg-gradient-to-r from-primary to-secondary text-white p-8 rounded-xl shadow-lg animate-fade-in">
           <div className="flex items-center mb-6">
