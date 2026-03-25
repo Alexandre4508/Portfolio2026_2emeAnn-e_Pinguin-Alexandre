@@ -59,7 +59,7 @@ const Home = () => {
               </div>
               <h4 className="text-xl font-bold mb-4 text-gray-800">Cybersécurité</h4>
               <p className="text-gray-600">
-                Passionné par la sécurité informatique, la protection des données et les bonnes pratiques sécuritaires.
+                Etudiant dans la sécurité informatique, la protection des données et les bonnes pratiques sécuritaires.
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-slide-in" style={{animationDelay: '0.4s'}}>
