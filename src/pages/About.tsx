@@ -90,7 +90,9 @@ const About = () => {
               <p className="text-gray-600 mb-4">
                 J'aime danser, une passion qui me permet de m'exprimer, de me détendre et de cultiver ma créativité au quotidien.
               </p>
+            </div>
           </div>
+        </div>
         </div>
 
         <div className="bg-gradient-to-r from-primary to-secondary text-white p-8 rounded-xl shadow-lg animate-fade-in">
