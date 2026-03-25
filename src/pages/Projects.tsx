@@ -1,5 +1,5 @@
 
-import { Shield, Thermometer, Lock, Network, Phone, MonitorSpeaker } from 'lucide-react';
+import { Shield, Thermometer, Lock, Network, Phone, MonitorSpeaker, Monitor, ExternalLink } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -8,14 +8,16 @@ const Projects = () => {
       description: "Sensibiliser le public aux bonnes pratiques de sécurité.",
       icon: Shield,
       color: "bg-red-500",
-      details: "Ce projet vise à éduquer et sensibiliser les utilisateurs aux menaces de cybersécurité actuelles et aux mesures préventives essentielles pour protéger leurs données personnelles et professionnelles."
+      details: "Ce projet vise à éduquer et sensibiliser les utilisateurs aux menaces de cybersécurité actuelles et aux mesures préventives essentielles pour protéger leurs données personnelles et professionnelles.",
+      link: "https://www.canva.com/design/DAGQh8EQjn0/ch8vVTu9xtW0kEJTZ6uq5Q/view?utm_content=DAGQh8EQjn0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7e927ec9b2"
     },
     {
       title: "Système de surveillance de la température pour salle des serveurs",
       description: "Ce projet vise à concevoir et déployer un appareil de mesure de la température pour une salle des serveurs, permettant une surveillance en temps réel des températures.",
       icon: Thermometer,
       color: "bg-orange-500",
-      details: "Développement d'un système de monitoring utilisant des capteurs de température connectés pour assurer la surveillance continue et l'alerte en cas de dépassement des seuils critiques."
+      details: "Développement d'un système de monitoring utilisant des capteurs de température connectés pour assurer la surveillance continue et l'alerte en cas de dépassement des seuils critiques.",
+      link: "https://www.canva.com/design/DAGZn8ZIOGY/qu6FO5sqV_fFafIZaeDIAQ/view?utm_content=DAGZn8ZIOGY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hadb3f10e72"
     },
     {
       title: "Exploration de solutions de chiffrement sous Linux : Gocryptfs et LUKS",
@@ -29,7 +31,8 @@ const Projects = () => {
       description: "Ce projet consiste à déployer un réseau informatique sécurisé pour une petite entreprise immobilière, incluant des VLANs, une DMZ, des services réseau (HTTP, FTP, DHCP, SSH), un pare-feu pfSense et un accès Internet.",
       icon: Network,
       color: "bg-blue-500",
-      details: "Conception et implémentation complète d'une infrastructure réseau sécurisée avec segmentation, services réseau et documentation technique détaillée."
+      details: "Conception et implémentation complète d'une infrastructure réseau sécurisée avec segmentation, services réseau et documentation technique détaillée.",
+      link: "https://www.canva.com/design/DAGmsNC98MY/wbq2buJu20wdJQ40GmCbeg/view?utm_content=DAGmsNC98MY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h474305b08d"
     },
     {
       title: "Caractériser et mesurer un système Télécom",
@@ -44,6 +47,14 @@ const Projects = () => {
       icon: MonitorSpeaker,
       color: "bg-indigo-500",
       details: "Développement d'une solution de monitoring réseau complète avec tableau de bord, historique des incidents et système d'alertes automatisées pour une maintenance proactive."
+    },
+    {
+      title: "Projet SafeScreen",
+      description: "Création d'un réseau d'écrans de divertissement destiné aux résidents d'un EHPAD, offrant un accès sécurisé à des contenus adaptés pour améliorer leur quotidien.",
+      icon: Monitor,
+      color: "bg-teal-500",
+      details: "Dans le cadre de ce projet, j'ai été en charge de la partie cybersécurité : sécurisation du réseau d'écrans, mise en place de contrôles d'accès, protection des données des résidents et définition des politiques de sécurité pour garantir un environnement numérique fiable et conforme.",
+      link: "https://www.canva.com/design/DAHDDIfdgKo/bmvAC1lapHD7vFoCG7xMpA/view?utm_content=DAHDDIfdgKo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h236819d34c"
     }
   ];
 
@@ -92,11 +103,22 @@ const Projects = () => {
                 <div className="bg-gray-50 px-6 py-4">
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-500 font-medium">Projet académique</span>
-                    <div className="flex space-x-1">
-                      {[1, 2, 3].map((star) => (
-                        <div key={star} className="w-2 h-2 bg-primary rounded-full"></div>
-                      ))}
-                    </div>
+                    {project.link ? (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 text-sm font-medium text-primary hover:underline transition-colors"
+                      >
+                        Voir la présentation <ExternalLink size={14} />
+                      </a>
+                    ) : (
+                      <div className="flex space-x-1">
+                        {[1, 2, 3].map((star) => (
+                          <div key={star} className="w-2 h-2 bg-primary rounded-full"></div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
