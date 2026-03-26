@@ -11,8 +11,10 @@ import {
   Heart,
   User,
   Target,
-  Briefcase
+  Briefcase,
+  Download
 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const CV = () => {
   return (
@@ -23,7 +25,14 @@ const CV = () => {
           <div className="bg-gradient-to-r from-primary to-secondary text-white p-8">
             <div className="text-center">
               <h1 className="text-4xl font-bold mb-2">ALEXANDRE PINGUIN</h1>
-              <p className="text-xl text-blue-100 mb-6">Étudiant en Réseaux et Télécommunications</p>
+              <p className="text-xl text-blue-100 mb-4">Étudiant en Réseaux et Télécommunications</p>
+              
+              <a href="/CV_Alexandre_Pinguin.pdf" download>
+                <Button variant="outline" className="mb-6 border-white text-white hover:bg-white/20">
+                  <Download size={16} />
+                  Télécharger mon CV
+                </Button>
+              </a>
               
               <div className="flex flex-wrap justify-center gap-6 text-sm">
                 <div className="flex items-center">
