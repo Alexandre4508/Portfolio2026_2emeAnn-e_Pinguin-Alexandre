@@ -11,8 +11,10 @@ import {
   Heart,
   User,
   Target,
-  Briefcase
+  Briefcase,
+  Download
 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const CV = () => {
   return (
