@@ -1,14 +1,17 @@
 
 import { Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-gradient-to-r from-primary to-secondary text-white py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <h3 className="text-xl font-bold">Alexandre Pinguin</h3>
-            <p className="text-blue-100">Étudiant en Réseaux & Télécommunications</p>
+            <p className="text-blue-100">{t('footer.role')}</p>
           </div>
           <div className="flex space-x-6">
             <a href="mailto:alexpinguin450@gmail.com" className="hover:text-tech-green-light transition-colors">
@@ -32,7 +35,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-6 pt-4 border-t border-blue-400 text-center text-blue-100">
-          <p>&copy; Alexandre Pinguin. Tous droits réservés.</p>
+          <p>{t('footer.rights')}</p>
         </div>
       </div>
     </footer>

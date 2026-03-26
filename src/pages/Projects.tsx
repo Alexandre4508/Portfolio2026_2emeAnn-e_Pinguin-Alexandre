@@ -1,5 +1,8 @@
 
 import { ExternalLink } from 'lucide-react';
+import { useState } from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import projectCybersecurite from '@/assets/project-cybersecurite.png';
 import projectTemperature from '@/assets/project-temperature.png';
 import projectReseau from '@/assets/project-reseau.png';
@@ -9,6 +12,9 @@ import projectIntegratif from '@/assets/project-integratif.png';
 import projectIutfam from '@/assets/project-iutfam.png';
 
 const Projects = () => {
+  const { t } = useLanguage();
+  const [selectedProject, setSelectedProject] = useState<number | null>(null);
+
   const projects = [
     {
       title: "Projet de sensibilisation à la cybersécurité",
@@ -84,10 +90,10 @@ const Projects = () => {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-12 animate-fade-in">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Mes Projets
+            {t('projects.title')}
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Découvrez les projets que j'ai réalisés durant ma formation en Réseaux et Télécommunications
+            {t('projects.subtitle')}
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
         </div>
@@ -133,23 +139,37 @@ const Projects = () => {
 
               <div className="bg-gray-50 px-6 py-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500 font-medium">Projet académique</span>
-                  {project.link ? (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-sm font-medium text-primary hover:underline transition-colors"
-                    >
-                      Voir la présentation <ExternalLink size={14} />
-                    </a>
-                  ) : (
-                    <div className="flex space-x-1">
-                      {[1, 2, 3].map((star) => (
-                        <div key={star} className="w-2 h-2 bg-primary rounded-full"></div>
-                      ))}
-                    </div>
-                  )}
+                  <span className="text-sm text-gray-500 font-medium">{t('projects.academic')}</span>
+                  <div className="flex items-center gap-3">
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 text-sm font-medium text-primary hover:underline transition-colors"
+                      >
+                        {t('projects.view')} <ExternalLink size={14} />
+                      </a>
+                    )}
+                    {project.image && (
+                      <button
+                        onClick={() => setSelectedProject(index)}
+                        className="flex space-x-1 hover:opacity-70 transition-opacity cursor-pointer"
+                        title="Voir en grand"
+                      >
+                        {[1, 2, 3].map((dot) => (
+                          <div key={dot} className="w-2 h-2 bg-primary rounded-full"></div>
+                        ))}
+                      </button>
+                    )}
+                    {!project.link && !project.image && (
+                      <div className="flex space-x-1">
+                        {[1, 2, 3].map((dot) => (
+                          <div key={dot} className="w-2 h-2 bg-primary rounded-full"></div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -157,33 +177,62 @@ const Projects = () => {
         </div>
 
         <div className="mt-16 bg-gradient-to-r from-primary to-secondary text-white p-8 rounded-xl shadow-lg text-center animate-fade-in">
-          <h2 className="text-2xl font-bold mb-4">
-            Compétences développées
-          </h2>
-          <p className="text-blue-100 mb-6 max-w-3xl mx-auto">
-            Ces projets m'ont permis de développer mes compétences techniques et pratiques dans des domaines variés
-            des télécommunications et de la cybersécurité.
-          </p>
+          <h2 className="text-2xl font-bold mb-4">{t('projects.skills.title')}</h2>
+          <p className="text-blue-100 mb-6 max-w-3xl mx-auto">{t('projects.skills.desc')}</p>
           <div className="grid md:grid-cols-4 gap-4">
             <div className="bg-white bg-opacity-20 p-4 rounded-lg">
-              <h3 className="font-semibold mb-2">Réseaux</h3>
-              <p className="text-sm text-blue-100">Configuration et sécurisation</p>
+              <h3 className="font-semibold mb-2">{t('projects.skills.network')}</h3>
+              <p className="text-sm text-blue-100">{t('projects.skills.network.desc')}</p>
             </div>
             <div className="bg-white bg-opacity-20 p-4 rounded-lg">
-              <h3 className="font-semibold mb-2">Sécurité</h3>
-              <p className="text-sm text-blue-100">Chiffrement et protection</p>
+              <h3 className="font-semibold mb-2">{t('projects.skills.security')}</h3>
+              <p className="text-sm text-blue-100">{t('projects.skills.security.desc')}</p>
             </div>
             <div className="bg-white bg-opacity-20 p-4 rounded-lg">
-              <h3 className="font-semibold mb-2">Monitoring</h3>
-              <p className="text-sm text-blue-100">Surveillance et alertes</p>
+              <h3 className="font-semibold mb-2">{t('projects.skills.monitoring')}</h3>
+              <p className="text-sm text-blue-100">{t('projects.skills.monitoring.desc')}</p>
             </div>
             <div className="bg-white bg-opacity-20 p-4 rounded-lg">
-              <h3 className="font-semibold mb-2">Télécom</h3>
-              <p className="text-sm text-blue-100">Codecs et transmission</p>
+              <h3 className="font-semibold mb-2">{t('projects.skills.telecom')}</h3>
+              <p className="text-sm text-blue-100">{t('projects.skills.telecom.desc')}</p>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Modal for full image view */}
+      <Dialog open={selectedProject !== null} onOpenChange={() => setSelectedProject(null)}>
+        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+          {selectedProject !== null && projects[selectedProject] && (
+            <>
+              <DialogHeader>
+                <DialogTitle className="text-xl">{projects[selectedProject].title}</DialogTitle>
+                <DialogDescription>{projects[selectedProject].description}</DialogDescription>
+              </DialogHeader>
+              {projects[selectedProject].image && (
+                <img
+                  src={projects[selectedProject].image!}
+                  alt={projects[selectedProject].title}
+                  className="w-full rounded-lg"
+                />
+              )}
+              <p className="text-gray-600 text-sm leading-relaxed mt-2">
+                {projects[selectedProject].details}
+              </p>
+              {projects[selectedProject].link && (
+                <a
+                  href={projects[selectedProject].link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-primary font-medium hover:underline mt-2"
+                >
+                  {t('projects.view')} <ExternalLink size={14} />
+                </a>
+              )}
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
