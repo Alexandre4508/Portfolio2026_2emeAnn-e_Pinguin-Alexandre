@@ -109,7 +109,7 @@ const Projects = () => {
                 <div className="w-full h-44 overflow-hidden">
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt={t(project.titleKey)}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
