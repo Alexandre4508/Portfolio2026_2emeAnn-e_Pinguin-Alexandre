@@ -206,8 +206,8 @@ const Projects = () => {
           {selectedProject !== null && projects[selectedProject] && (
             <>
               <DialogHeader>
-                <DialogTitle className="text-xl">{projects[selectedProject].title}</DialogTitle>
-                <DialogDescription>{projects[selectedProject].description}</DialogDescription>
+                <DialogTitle className="text-xl">{t(projects[selectedProject].titleKey)}</DialogTitle>
+                <DialogDescription>{t(projects[selectedProject].descKey)}</DialogDescription>
               </DialogHeader>
               {projects[selectedProject].image && (
                 <img
