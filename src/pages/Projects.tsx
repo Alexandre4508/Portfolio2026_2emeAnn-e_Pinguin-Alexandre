@@ -217,7 +217,7 @@ const Projects = () => {
                 />
               )}
               <p className="text-gray-600 text-sm leading-relaxed mt-2">
-                {projects[selectedProject].details}
+                {t(projects[selectedProject].detailsKey)}
               </p>
               {projects[selectedProject].link && (
                 <a
