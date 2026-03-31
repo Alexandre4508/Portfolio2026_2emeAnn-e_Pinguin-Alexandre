@@ -17,71 +17,71 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Projet de sensibilisation à la cybersécurité",
-      description: "Sensibiliser le public aux bonnes pratiques de sécurité.",
+      titleKey: 'project.cyber.title',
+      descKey: 'project.cyber.desc',
       image: projectCybersecurite,
       color: "bg-red-500",
-      details: "Ce projet vise à éduquer et sensibiliser les utilisateurs aux menaces de cybersécurité actuelles et aux mesures préventives essentielles pour protéger leurs données personnelles et professionnelles.",
+      detailsKey: 'project.cyber.details',
       link: "https://www.canva.com/design/DAGQh8EQjn0/ch8vVTu9xtW0kEJTZ6uq5Q/view?utm_content=DAGQh8EQjn0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h7e927ec9b2"
     },
     {
-      title: "Système de surveillance de la température pour salle des serveurs",
-      description: "Ce projet vise à concevoir et déployer un appareil de mesure de la température pour une salle des serveurs, permettant une surveillance en temps réel des températures.",
+      titleKey: 'project.temp.title',
+      descKey: 'project.temp.desc',
       image: projectTemperature,
       color: "bg-orange-500",
-      details: "Développement d'un système de monitoring utilisant des capteurs de température connectés pour assurer la surveillance continue et l'alerte en cas de dépassement des seuils critiques.",
+      detailsKey: 'project.temp.details',
       link: "https://www.canva.com/design/DAGZn8ZIOGY/qu6FO5sqV_fFafIZaeDIAQ/view?utm_content=DAGZn8ZIOGY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hadb3f10e72"
     },
     {
-      title: "Exploration de solutions de chiffrement sous Linux : Gocryptfs et LUKS",
-      description: "Ce projet explore et compare deux méthodes de chiffrement sous Linux, Gocryptfs et LUKS, en examinant leurs avantages, inconvénients, cas d'utilisation, et performances.",
+      titleKey: 'project.crypto.title',
+      descKey: 'project.crypto.desc',
       image: null,
       color: "bg-purple-500",
-      details: "Analyse comparative approfondie des solutions de chiffrement, incluant des tests de performance, d'usabilité et de sécurité pour guider le choix selon les besoins spécifiques."
+      detailsKey: 'project.crypto.details',
     },
     {
-      title: "Construire un réseau informatique pour une petite structure",
-      description: "Ce projet consiste à déployer un réseau informatique sécurisé pour une petite entreprise immobilière, incluant des VLANs, une DMZ, des services réseau (HTTP, FTP, DHCP, SSH), un pare-feu pfSense et un accès Internet.",
+      titleKey: 'project.network.title',
+      descKey: 'project.network.desc',
       image: projectReseau,
       color: "bg-blue-500",
-      details: "Conception et implémentation complète d'une infrastructure réseau sécurisée avec segmentation, services réseau et documentation technique détaillée.",
+      detailsKey: 'project.network.details',
       link: "https://www.canva.com/design/DAGmsNC98MY/wbq2buJu20wdJQ40GmCbeg/view?utm_content=DAGmsNC98MY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h474305b08d"
     },
     {
-      title: "Caractériser et mesurer un système Télécom",
-      description: "L'objectif de ce projet était d'expérimenter un codec (G.711) dans un système télécom.",
+      titleKey: 'project.telecom.title',
+      descKey: 'project.telecom.desc',
       image: null,
       color: "bg-green-500",
-      details: "Étude pratique des codecs audio dans les télécommunications, analyse des performances et de la qualité de transmission du codec G.711 dans différentes conditions."
+      detailsKey: 'project.telecom.details',
     },
     {
-      title: "Supervision des performances réseau",
-      description: "Le projet consiste à mettre en place une console de supervision permettant de surveiller l'état des équipements réseau, avoir un historique des pannes sur les deux derniers mois et envoyer des alertes en cas de panne prolongée.",
+      titleKey: 'project.supervision.title',
+      descKey: 'project.supervision.desc',
       image: projectSupervision,
       color: "bg-indigo-500",
-      details: "Développement d'une solution de monitoring réseau complète avec tableau de bord, historique des incidents et système d'alertes automatisées pour une maintenance proactive."
+      detailsKey: 'project.supervision.details',
     },
     {
-      title: "Projet SafeScreen",
-      description: "Création d'un réseau d'écrans de divertissement destiné aux résidents d'un EHPAD, offrant un accès sécurisé à des contenus adaptés pour améliorer leur quotidien.",
+      titleKey: 'project.safescreen.title',
+      descKey: 'project.safescreen.desc',
       image: projectSafescreen,
       color: "bg-teal-500",
-      details: "Dans le cadre de ce projet, j'ai été en charge de la partie cybersécurité : sécurisation du réseau d'écrans, mise en place de contrôles d'accès, protection des données des résidents et définition des politiques de sécurité pour garantir un environnement numérique fiable et conforme.",
+      detailsKey: 'project.safescreen.details',
       link: "https://www.canva.com/design/DAHDDIfdgKo/bmvAC1lapHD7vFoCG7xMpA/view?utm_content=DAHDDIfdgKo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h236819d34c"
     },
     {
-      title: "Projet intégratif – Architecture multi-sites",
-      description: "Mise en place d'une architecture réseau complète répartie sur deux sites (Maison Mère et Succursale), interconnectés via pfSense avec segmentation par VLANs.",
+      titleKey: 'project.integratif.title',
+      descKey: 'project.integratif.desc',
       image: projectIntegratif,
       color: "bg-cyan-500",
-      details: "Déploiement d'une infrastructure multi-sites comprenant des VLANs par catégorie d'utilisateurs (administration, professeurs, étudiants), un serveur Samba pour le partage de fichiers et un serveur Moodle accessible depuis l'ensemble des réseaux, le tout sécurisé par des pare-feux pfSense."
+      detailsKey: 'project.integratif.details',
     },
     {
-      title: "Site web IUTFAM – Réseau social étudiant",
-      description: "Conception et développement d'un réseau social web dédié aux étudiants de l'IUT de La Réunion, permettant la communication et l'échange au sein de la communauté étudiante.",
+      titleKey: 'project.iutfam.title',
+      descKey: 'project.iutfam.desc',
       image: projectIutfam,
       color: "bg-emerald-500",
-      details: "Ce projet collaboratif avait pour défi de créer une plateforme sociale complète avec système de chat, gestion d'événements et espace communautaire, offrant aux étudiants de l'IUT un outil de communication dédié et sécurisé."
+      detailsKey: 'project.iutfam.details',
     }
   ];
 
@@ -109,30 +109,30 @@ const Projects = () => {
                 <div className="w-full h-44 overflow-hidden">
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt={t(project.titleKey)}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               ) : (
                 <div className={`w-full h-44 ${project.color} flex items-center justify-center`}>
                   <span className="text-white text-5xl font-bold opacity-30">
-                    {project.title.charAt(0)}
+                    {t(project.titleKey).charAt(0)}
                   </span>
                 </div>
               )}
 
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className="text-lg font-bold text-gray-800 mb-3 line-clamp-2">
-                  {project.title}
+                  {t(project.titleKey)}
                 </h3>
 
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  {project.description}
+                  {t(project.descKey)}
                 </p>
 
                 <div className="border-t pt-4 mt-auto">
                   <p className="text-xs text-gray-500 leading-relaxed">
-                    {project.details}
+                    {t(project.detailsKey)}
                   </p>
                 </div>
               </div>
@@ -206,18 +206,18 @@ const Projects = () => {
           {selectedProject !== null && projects[selectedProject] && (
             <>
               <DialogHeader>
-                <DialogTitle className="text-xl">{projects[selectedProject].title}</DialogTitle>
-                <DialogDescription>{projects[selectedProject].description}</DialogDescription>
+                <DialogTitle className="text-xl">{t(projects[selectedProject].titleKey)}</DialogTitle>
+                <DialogDescription>{t(projects[selectedProject].descKey)}</DialogDescription>
               </DialogHeader>
               {projects[selectedProject].image && (
                 <img
                   src={projects[selectedProject].image!}
-                  alt={projects[selectedProject].title}
+                  alt={t(projects[selectedProject].titleKey)}
                   className="w-full rounded-lg"
                 />
               )}
               <p className="text-gray-600 text-sm leading-relaxed mt-2">
-                {projects[selectedProject].details}
+                {t(projects[selectedProject].detailsKey)}
               </p>
               {projects[selectedProject].link && (
                 <a
