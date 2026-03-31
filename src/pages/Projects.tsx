@@ -116,7 +116,7 @@ const Projects = () => {
               ) : (
                 <div className={`w-full h-44 ${project.color} flex items-center justify-center`}>
                   <span className="text-white text-5xl font-bold opacity-30">
-                    {project.title.charAt(0)}
+                    {t(project.titleKey).charAt(0)}
                   </span>
                 </div>
               )}
