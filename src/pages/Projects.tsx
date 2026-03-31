@@ -127,7 +127,7 @@ const Projects = () => {
                 </h3>
 
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  {project.description}
+                  {t(project.descKey)}
                 </p>
 
                 <div className="border-t pt-4 mt-auto">
