@@ -212,7 +212,7 @@ const Projects = () => {
               {projects[selectedProject].image && (
                 <img
                   src={projects[selectedProject].image!}
-                  alt={projects[selectedProject].title}
+                  alt={t(projects[selectedProject].titleKey)}
                   className="w-full rounded-lg"
                 />
               )}
