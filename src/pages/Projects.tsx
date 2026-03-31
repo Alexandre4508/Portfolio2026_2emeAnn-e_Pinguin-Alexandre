@@ -123,7 +123,7 @@ const Projects = () => {
 
               <div className="p-6 flex-1 flex flex-col">
                 <h3 className="text-lg font-bold text-gray-800 mb-3 line-clamp-2">
-                  {project.title}
+                  {t(project.titleKey)}
                 </h3>
 
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">
