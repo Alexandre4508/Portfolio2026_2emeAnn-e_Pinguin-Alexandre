@@ -81,7 +81,7 @@ const translations: Record<Language, Record<string, string>> = {
     'cv.diplomas.title': 'DIPLÔMES OBTENUS',
     'cv.skills.title': 'QUALITÉS DÉVELOPPÉES',
     'cv.skills.desc1': "Grâce à mon diplôme j'ai appris à souvent collaborer et travailler au sein d'une équipe, ce qui fait que j'ai la capacité à écouter les suggestions qu'on peut me proposer pour améliorer mon travail.",
-    'cv.skills.desc2': "Je sais m'adapter à quelconque situation avec flexibilité, surtout s'il s'agit de mon travail à effectuer au quotidien, et j'ai pu le démontrer grâce à cette première année dans ce BUT qui diffère complètement de mon diplôme précédent.",
+    'cv.skills.desc2': "Je sais m'adapter à quelconque situation avec flexibilité, surtout s'il s'agit de mon travail à effectuer au quotidien, et j'ai pu le démontrer grâce à ma 1er & 2ème année dans ce BUT qui diffère complètement de mon diplôme précédent.",
     'cv.experience.title': 'PROJETS / EXPÉRIENCE',
     'cv.experience.audit': "Audit de Sécurité Réseau Direct : Rédaction complète d'un audit de sécurité pour un client en effectuant du Pentesting sur plusieurs machines.",
     'cv.experience.secure': "Concevoir un réseau sécurisé : Conception, déploiement et sécurisation de l'architecture réseau d'une entreprise multisite.",
