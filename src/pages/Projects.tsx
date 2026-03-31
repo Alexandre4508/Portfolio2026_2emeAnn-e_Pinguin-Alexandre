@@ -132,7 +132,7 @@ const Projects = () => {
 
                 <div className="border-t pt-4 mt-auto">
                   <p className="text-xs text-gray-500 leading-relaxed">
-                    {project.details}
+                    {t(project.detailsKey)}
                   </p>
                 </div>
               </div>
